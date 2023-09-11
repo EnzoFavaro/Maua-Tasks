@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         color: const Color(0xff001E3B),
         child: const Column(
           children: [
-            CardTask('Rogerio Guedes', 'tarefa')
+            CardTask('Rogerio Guedes', 'Tarefa', 'Desafio de Cálculo: \nAnalisar taxas de variação em situações do \ncotidiano, calculando derivadas \ne interpretando seus significados.', 'Até dia 22/08 - 23:59')
           ],
         ),
       ),
