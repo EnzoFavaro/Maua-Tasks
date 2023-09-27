@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'flutter:flutter';
 
 class CardTask extends StatelessWidget {
   final String nameTeacher;
@@ -21,7 +20,7 @@ class CardTask extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('assets/images/photoTeacher.png'),
+              Image.asset('assets/images/teacherPhoto.png'),
               Padding(
                 padding: const EdgeInsets.only(left: 6.0, top: 2.0),
                 child: Text.rich(

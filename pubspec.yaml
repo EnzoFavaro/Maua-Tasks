@@ -86,5 +86,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
-    - assets/images/photoTeacher.png
+    - assets/images/teacherPhoto.png
     - assets/fonts/
+    - assets/images/exclamationImage.png
+    - assets/images/arrowImage.png

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../profile_page.dart';
+
 class BottomNavigationWidget extends StatefulWidget {
   const BottomNavigationWidget({super.key});
   @override
@@ -12,24 +14,22 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   // Lista de páginas para exibir quando os ícones são clicados
   final List<Widget> _pages = [
     // Página 1
-    const Center(
-      child: Text(''),
-    ),
+    const ProfilePage(),
     // Página 2
     const Center(
-      child: Text(''),
+      child: Text('página 2'),
     ),
     // Página 3
     const Center(
-      child: Text(''),
+      child: Text('página 3'),
     ),
     // Página 4
     const Center(
-      child: Text(''),
+      child: Text('página 4'),
     ),
     // Página 5
     const Center(
-      child: Text(''),
+      child: Text('página 5'),
     ),
   ];
 
