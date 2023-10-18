@@ -12,8 +12,8 @@ class CardTask extends StatelessWidget {
     return Container(
       color: const Color(0xffFFD1D1),
       width: 374,
-      height: 138,
-      margin: const EdgeInsets.only(top: 100.0),
+      // height: 138,
+      constraints: BoxConstraints(minHeight: 100),
       padding: const EdgeInsets.all(7.0),
       child: Column(
         children: [
@@ -64,27 +64,21 @@ class CardTask extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10),
-            child: Row(
-              children: [
-                FittedBox(
-                  child: Text(
-                    description,
-                    style: const TextStyle(
-                      fontFamily: 'Lato-Regular',
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black,
-                      fontSize: 10,
-                      decoration: TextDecoration.none,
-                    ),
-                  ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Text(
+                description,
+                style: const TextStyle(
+                  fontFamily: 'Lato-Regular',
+                  fontWeight: FontWeight.w600,
+                  color: Colors.black,
+                  fontSize: 10,
+                  decoration: TextDecoration.none,
                 ),
-              ],
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 6.0),
+            Padding(
+            padding: const EdgeInsets.only(top: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
