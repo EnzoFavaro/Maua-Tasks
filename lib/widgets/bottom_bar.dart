@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../pages/home.dart';
 import '../pages/profile.dart';
 
 class BottomNavigationWidget extends StatefulWidget {
@@ -16,7 +17,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
     const Profile(),
     // Página 2
     const Center(
-      child: Text('página 2'),
+      child: Home(),
     ),
     // Página 3
     const Center(
