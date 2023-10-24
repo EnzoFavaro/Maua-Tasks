@@ -13,7 +13,7 @@ class CardTask extends StatelessWidget {
       color: const Color(0xffFFD1D1),
       width: 374,
       // height: 138,
-      constraints: BoxConstraints(minHeight: 100),
+      constraints: const BoxConstraints(minHeight: 100),
       padding: const EdgeInsets.all(7.0),
       child: Column(
         children: [

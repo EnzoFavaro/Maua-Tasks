@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maua_tasks/pages/calendar.dart';
 import '../pages/home.dart';
 import '../pages/profile.dart';
 
@@ -11,23 +12,17 @@ class BottomNavigationWidget extends StatefulWidget {
 class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   int _selectedIndex = 0;
 
-  // Lista de páginas para exibir quando os ícones são clicados
   final List<Widget> _pages = [
-    // Página 1
-    const Profile(),
-    // Página 2
+    const Home(),
     const Center(
-      child: Home(),
+      child: Calendar(),
     ),
-    // Página 3
     const Center(
-      child: Text('página 3'),
+      child: Profile()
     ),
-    // Página 4
     const Center(
       child: Text('página 4'),
     ),
-    // Página 5
     const Center(
       child: Text('página 5'),
     ),

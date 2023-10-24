@@ -51,7 +51,7 @@ class Home extends StatelessWidget {
            Row(
             children: [
              const Padding(
-              padding: EdgeInsets.only(left: 10, top: 100),
+              padding: EdgeInsets.only(left: 10, top: 50),
               child: Text(
                 "Sua agenda:",
                 style: TextStyle(
@@ -61,7 +61,7 @@ class Home extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               )),
               Padding(
-                padding: const EdgeInsets.only(top: 100, left: 200), 
+                padding: const EdgeInsets.only( left: 200, top: 50,), 
                 child: IconButton(
                 icon: const Icon(Icons.filter_alt),
                 onPressed: () {},
