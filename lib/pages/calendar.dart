@@ -58,7 +58,9 @@ class _CalendarState extends State<Calendar> {
       ),
       body: Column(
         children: [
-          TableCalendar(
+          Padding(
+            padding: const EdgeInsets.only(top: 30),
+            child: TableCalendar(
             focusedDay: now,
             firstDay: firstDay,
             lastDay: lastDay,
@@ -114,7 +116,7 @@ class _CalendarState extends State<Calendar> {
                   child: Text(text, style: const TextStyle(color: Colors.white))
               );
             }),
-          )
+          ))
         ],
       ),
     );
