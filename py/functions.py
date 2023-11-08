@@ -28,7 +28,7 @@ def processarCalendario():
         if client.admin.command('ping'):
             db = client["MauaTasks"]
             colletion = db["events"]
-            colletion.create_index( { 'curso': 1, 'sumario': 1, 'descricao': 1, 'dataIni': 1, 'dataFim': 1 }, {unique:true} )
+            colletion.create_index( { 'curso': 1, 'sumario': 1, 'descricao': 1, 'dataIni': 1, 'dataFim': 1 })
             data = open("calendario.ics").read()
             for cal in vobject.readComponents(data):
                 for component in cal.components():
@@ -56,4 +56,3 @@ def processarCalendario():
 
 
 #downloadCalendario(15673, 'a9e4254f4fabe8f3d811e6253879af88814b7c69')
-processarCalendario()
