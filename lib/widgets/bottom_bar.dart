@@ -3,6 +3,7 @@ import 'package:maua_tasks/pages/calendar.dart';
 import '../pages/home.dart';
 import '../pages/profile.dart';
 import '../pages/profile2.dart';
+import '../pages/settings.dart';
 
 class BottomNavigationWidget extends StatefulWidget {
   const BottomNavigationWidget({super.key});
@@ -25,7 +26,7 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
       child: Profile2(),
     ),
     const Center(
-      child: Text('página 5'),
+      child: Settings(),
     ),
   ];
 

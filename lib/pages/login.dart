@@ -55,7 +55,7 @@ class Login extends StatelessWidget {
                 )),
           ),
           TextButton(
-              onPressed: () => print("CLICADO"),
+              onPressed: (){},
               child: Container(
                 alignment: Alignment.center,
                 height: 50,
@@ -81,8 +81,8 @@ class Login extends StatelessWidget {
                         fontFamily: 'Lato-Regular',
                         fontSize: 20,
                         decoration: TextDecoration.none,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 1.5),
+                        fontWeight: FontWeight.w400,
+                        letterSpacing: 1.0),
                   )
                 ]),
               )),
