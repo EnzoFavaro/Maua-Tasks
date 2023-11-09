@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -8,6 +11,8 @@ class Settings extends StatefulWidget {
 }
 
 class _SettingsState extends State<Settings> {
+  final _urlGitHub = Uri.parse('https://github.com/EnzoFavaro/Maua-Tasks');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,7 +116,14 @@ class _SettingsState extends State<Settings> {
               Padding(
                 padding: const EdgeInsets.only(left: 5),
                 child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        launchUrl(
+                          _urlGitHub,
+                          mode: LaunchMode.externalApplication,
+                        );
+                      });
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       height: 50,

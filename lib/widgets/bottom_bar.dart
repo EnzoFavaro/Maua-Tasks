@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:maua_tasks/pages/alerts.dart';
 import 'package:maua_tasks/pages/calendar.dart';
 import '../pages/home.dart';
+import '../pages/login.dart';
 import '../pages/profile.dart';
 // import '../pages/profile2.dart';
 import '../pages/settings.dart';
