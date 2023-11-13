@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maua_tasks/widgets/bottom_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Login extends StatefulWidget {
@@ -28,7 +29,12 @@ class _LoginState extends State<Login> {
               padding: const EdgeInsets.only(top: 120),
               child: Image.asset('assets/images/rowImage.png')),
           TextButton(
-            onPressed: () => print("CLICADO"),
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const BottomNavigationWidget()),
+              );
+            },
             child: Padding(
                 padding: const EdgeInsets.only(top: 40),
                 child: Container(
