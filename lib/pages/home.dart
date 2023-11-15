@@ -68,29 +68,28 @@ class Home extends StatelessWidget {
                 color: Colors.white,
           )) 
             ]),
-          const CardTask("Rogerio Guedes", "Tarefa", "Desafio de Cálculo: Analisar taxas de variação em situações do cotidiano, calculando derivadas e interpretando seus significados.", "Até dia 22/10 - 23:59"),
-          const Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59")),
-            const Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59")),
-            const Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59")),
-            const Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59")),
-            const Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59")),
-            const Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59")),
-            const Padding(
-            padding: EdgeInsets.only(top: 20),
-            child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59")),
-            
+          const CardTask("Rogerio Guedes", "Tarefa", "Desafio de Cálculo: Analisar taxas de variação em situações do cotidiano, calculando derivadas e interpretando seus significados.", "Até dia 22/10 - 23:59", Color(0xffFFD1D1)),
+          // const Padding(
+          //   padding: EdgeInsets.only(top: 20),
+          //   child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59", Color(0xffD2FFD1))),
+          //   const Padding(
+          //   padding: EdgeInsets.only(top: 20),
+          //   child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59", Color(0xffFFD1D1))),
+          //   const Padding(
+          //   padding: EdgeInsets.only(top: 20),
+          //   child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59", Color(0xffD2FFD1))),
+          //   const Padding(
+          //   padding: EdgeInsets.only(top: 20),
+          //   child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59", Color(0xffFFD1D1))),
+          //   const Padding(
+          //   padding: EdgeInsets.only(top: 20),
+          //   child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59", Color(0xffD2FFD1))),
+          //   const Padding(
+          //   padding: EdgeInsets.only(top: 20),
+          //   child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59", Color(0xffFFD1D1))),
+          //   const Padding(
+          //   padding: EdgeInsets.only(top: 20),
+          //   child: CardTask("Rogerio Guedes", "Tarefa", "É com alegria que estendemos a vocês um convite especial para participar da nossa aguardada Feira de Estágios do Instituto Mauá de Tecnologia! Uma jornada de oportunidades para interações valiosas com empresas renomadas, ampliação de horizontes profissionais e o início de trajetórias promissoras. Contamos com a presença de todos!", "Até dia 22/10 - 23:59", Color(0xffD2FFD1))),  
         ],
       ),
       )

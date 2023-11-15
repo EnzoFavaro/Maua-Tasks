@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:maua_tasks/widgets/bottom_bar.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
   const Login({super.key});
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
+  final _urlGitHub = Uri.parse('https://github.com/EnzoFavaro/Maua-Tasks');
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +29,12 @@ class Login extends StatelessWidget {
               padding: const EdgeInsets.only(top: 120),
               child: Image.asset('assets/images/rowImage.png')),
           TextButton(
-            onPressed: () => print("CLICADO"),
+            onPressed: (){
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const BottomNavigationWidget()),
+              );
+            },
             child: Padding(
                 padding: const EdgeInsets.only(top: 40),
                 child: Container(
@@ -55,7 +69,14 @@ class Login extends StatelessWidget {
                 )),
           ),
           TextButton(
-              onPressed: () => print("CLICADO"),
+              onPressed: (){
+                setState(() {
+                  launchUrl(
+                    _urlGitHub,
+                    mode: LaunchMode.externalApplication,
+                  );
+                });
+              },
               child: Container(
                 alignment: Alignment.center,
                 height: 50,
@@ -81,8 +102,8 @@ class Login extends StatelessWidget {
                         fontFamily: 'Lato-Regular',
                         fontSize: 20,
                         decoration: TextDecoration.none,
-                        fontWeight: FontWeight.normal,
-                        letterSpacing: 1.5),
+                        fontWeight: FontWeight.w400,
+                        letterSpacing: 1.0),
                   )
                 ]),
               )),

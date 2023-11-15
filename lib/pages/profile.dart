@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maua_tasks/pages/profile2.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -62,7 +63,27 @@ class Profile extends StatelessWidget {
                       'assets/images/arrowImage.png',
                       alignment: Alignment.topCenter
                     ))
-              ]))
+              ])),
+              Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 55, top: 10),
+                child: SizedBox(
+                    width: 300,
+                    height: 25,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Profile2()),
+                        );
+                      },
+                      child: const Text("Finalizar cadastro"),
+                    )),
+              )
+            ],
+          ),
             ])));
+
   }
 }
