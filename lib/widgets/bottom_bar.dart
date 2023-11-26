@@ -22,9 +22,9 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
       child: Calendar(),
     ),
     const Center(
-      child: Alerts(),
+      child: Profile2(),
    ),const Center(
-      child: Calendar(),
+      child: Alerts(),
     ),
     const Center(
       child: Settings(),
