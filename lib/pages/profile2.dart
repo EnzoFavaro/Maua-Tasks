@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:maua_tasks/pages/home.dart';
 
 final dropValueCurso = ValueNotifier("");
 final dropValueSerie = ValueNotifier("");
@@ -32,8 +31,6 @@ final dropOpcoesPeriodo = [
 
 enum SingingCharacter { t1, t2, t3 }
 
-
-
 class Profile2 extends StatefulWidget {
   const Profile2({super.key});
   @override
@@ -52,7 +49,7 @@ class _Profile2State extends State<Profile2> {
 
   @override
   Widget build(BuildContext context) {
-      return Scaffold(
+    return Scaffold(
       backgroundColor: const Color(0xff001E3B),
       appBar: AppBar(
         elevation: 0,
@@ -518,6 +515,6 @@ class _Profile2State extends State<Profile2> {
           ],
         ),
       ),
-    );}
-    
+    );
   }
+}

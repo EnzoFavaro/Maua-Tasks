@@ -26,7 +26,7 @@ class TaskDetails extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.asset('assets/images/teacherPhoto.png'),
+                Image.asset('assets/images/photoRogerio.png'),
                 Padding(
                   padding: const EdgeInsets.only(left: 6.0, top: 2.0),
                   child: Text.rich(

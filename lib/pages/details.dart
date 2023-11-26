@@ -51,7 +51,7 @@ class _DetailsState extends State<Details> {
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.only(right: 10, top: 10),
-            child: Image.asset('assets/images/teacherPhoto.png'),
+            child: Image.asset('assets/images/photoRogerio.png'),
           ),
         ],
       ),

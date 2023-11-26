@@ -7,14 +7,15 @@ import '../pages/settings.dart';
 
 class BottomNavigationWidget extends StatefulWidget {
   const BottomNavigationWidget({super.key});
-  
+
   @override
   State<BottomNavigationWidget> createState() => _BottomNavigationWidgetState();
 }
+
 bool fistTime = true;
+
 class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   int _selectedIndex = 0;
-  
 
   final List<Widget> _pages = [
     const Home(),
@@ -31,7 +32,6 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
     )
   ];
 
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -46,7 +46,11 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
           backgroundColor: const Color(0xff1578D4),
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined, color: Colors.white, size: 30,),
+              icon: Icon(
+                Icons.home_outlined,
+                color: Colors.white,
+                size: 30,
+              ),
               label: '',
             ),
             BottomNavigationBarItem(
@@ -54,7 +58,8 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.person_outline, color: Color.fromARGB(255, 214, 213, 213), size: 30),
+              icon: Icon(Icons.person_outline,
+                  color: Color.fromARGB(255, 214, 213, 213), size: 30),
               label: '',
             ),
             BottomNavigationBarItem(
@@ -62,14 +67,15 @@ class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings_outlined, color: Colors.white, size: 30),
+              icon:
+                  Icon(Icons.settings_outlined, color: Colors.white, size: 30),
               label: '',
             ),
           ],
           currentIndex: _selectedIndex,
-          onTap: _onItemTapped, 
+          onTap: _onItemTapped,
         ),
-      ], 
+      ],
     );
   }
 
