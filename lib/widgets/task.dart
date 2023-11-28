@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:maua_tasks/pages/details.dart';
-import 'package:maua_tasks/pages/login.dart';
-import 'package:maua_tasks/pages/settings.dart';
 
 class CardTask extends StatelessWidget {
   final String nameTeacher;
@@ -36,44 +34,44 @@ class CardTask extends StatelessWidget {
               children: [
                 Image.asset(photo),
                 Padding(
-                  padding: const EdgeInsets.only(left: 6.0, top: 2.0),
-                  child: Text.rich(
-                    TextSpan(
-                      text: nameTeacher,
-                      style: const TextStyle(
-                        fontFamily: 'Lato-Regular',
-                        fontWeight: FontWeight.w700,
-                        color: Colors.black,
-                        fontSize: 16.0,
-                        decoration: TextDecoration.none,
-                      ),
-                      children: <InlineSpan>[
+                  padding: const EdgeInsets.only(left: 5.0, top: 2.0),
+                  child: Container(
+                      alignment: Alignment.topLeft,
+                      child: Text.rich(
                         TextSpan(
-                          text: discipline,
+                          text: nameTeacher,
                           style: const TextStyle(
                             fontFamily: 'Lato-Regular',
-                            fontWeight: FontWeight.w800,
-                            letterSpacing: 0.2,
-                            fontSize: 13.0,
-                            color: Color(0xff875400),
-                            height: 1.2,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black,
+                            fontSize: 16.0,
+                            decoration: TextDecoration.none,
                           ),
+                          children: <InlineSpan>[
+                            TextSpan(
+                              text: discipline,
+                              style: const TextStyle(
+                                fontFamily: 'Lato-Regular',
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 0.2,
+                                fontSize: 13.0,
+                                color: Color(0xff875400),
+                                height: 1.2,
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  ),
+                      )),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 150),
-                  child: Text(
-                    task,
-                    style: const TextStyle(
-                      fontFamily: 'Lato-Regular',
-                      fontWeight: FontWeight.w800,
-                      fontSize: 13.0,
-                      color: Colors.black,
-                      decoration: TextDecoration.none,
-                    ),
+                const Spacer(),
+                Text(
+                  task,
+                  style: const TextStyle(
+                    fontFamily: 'Lato-Regular',
+                    fontWeight: FontWeight.w800,
+                    fontSize: 13.0,
+                    color: Colors.black,
+                    decoration: TextDecoration.none,
                   ),
                 ),
               ],
