@@ -38,14 +38,30 @@ class Profile2 extends StatefulWidget {
 }
 
 class _Profile2State extends State<Profile2> {
+  void _checkFieldsSelected() {
+    if (dropValueCurso.value.isNotEmpty &&
+        dropValueSerie.value.isNotEmpty &&
+        dropValuePeriodo.value.isNotEmpty) {
+      setState(() {
+        areAllFieldsSelected = true;
+      });
+    } else {
+      setState(() {
+        areAllFieldsSelected = false;
+      });
+    }
+  }
+
+  bool areAllFieldsSelected = false;
+  bool isCursoSelected = false;
+  bool isSerieSelected = false;
+  bool isPeriodoSelected = false;
   SingingCharacter? _character = SingingCharacter.t1;
-  bool _showButton = true;
   bool? _isCheckedProvas = false;
   bool? _isCheckedTarefas = false;
   bool? _isCheckedEventos = false;
   bool? _isCheckedMensagens = false;
   bool _selectPhotoProfile = false;
-  String? textButtonProfile = "Selecione uma foto de perfil";
 
   @override
   Widget build(BuildContext context) {
@@ -54,13 +70,15 @@ class _Profile2State extends State<Profile2> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: const Text('22.123.456-7'),
+        surfaceTintColor: Colors.transparent,
+        title: const Text(
+          '22.123.456-7',
+          style: TextStyle(color: Colors.white),
+        ),
         actions: const <Widget>[
           Padding(
             padding: EdgeInsets.only(right: 10),
-            child: Icon(
-              Icons.person_2_rounded,
-            ),
+            child: Icon(Icons.person_2_rounded, color: Colors.white),
           ),
         ],
       ),
@@ -117,8 +135,10 @@ class _Profile2State extends State<Profile2> {
                     child: DropdownButtonFormField<String>(
                       hint: const Text("Selecione o seu curso"),
                       value: (value.isEmpty) ? null : value,
-                      onChanged: (escolha) =>
-                          dropValueCurso.value = escolha.toString(),
+                      onChanged: (escolha) {
+                        dropValueCurso.value = escolha.toString();
+                        _checkFieldsSelected();
+                      },
                       items: dropOpcoesCurso
                           .map(
                             (op) =>
@@ -160,8 +180,10 @@ class _Profile2State extends State<Profile2> {
                     child: DropdownButtonFormField<String>(
                       hint: const Text("Selecione"),
                       value: (value.isEmpty) ? null : value,
-                      onChanged: (escolha) =>
-                          dropValueSerie.value = escolha.toString(),
+                      onChanged: (escolha) {
+                        dropValueSerie.value = escolha.toString();
+                        _checkFieldsSelected();
+                      },
                       items: dropOpcoesSerie
                           .map(
                             (op) =>
@@ -203,8 +225,10 @@ class _Profile2State extends State<Profile2> {
                     child: DropdownButtonFormField<String>(
                       hint: const Text("Selecione o período"),
                       value: (value.isEmpty) ? null : value,
-                      onChanged: (escolha) =>
-                          dropValuePeriodo.value = escolha.toString(),
+                      onChanged: (escolha) {
+                        dropValuePeriodo.value = escolha.toString();
+                        _checkFieldsSelected();
+                      },
                       items: dropOpcoesPeriodo
                           .map(
                             (op) =>
@@ -237,30 +261,10 @@ class _Profile2State extends State<Profile2> {
                           fontFamily: 'Lato-Regular',
                           fontSize: 18),
                     ))),
-            _showButton
-                ? ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                        _showButton = false;
-                      });
-                    },
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(const Color(0xff001E3B)),
-                      shadowColor:
-                          MaterialStateProperty.all(Colors.transparent),
-                    ),
-                    child: const Align(
-                        alignment: Alignment.topLeft,
-                        child: Padding(
-                            padding: EdgeInsets.only(left: 10, top: 10),
-                            child: Text(
-                              'Selecione o curso, série e período antes',
-                              style: TextStyle(color: Color(0xffFF0000)),
-                            ))))
-                : Row(children: [
+            areAllFieldsSelected
+                ? Row(children: [
                     Padding(
-                        padding: const EdgeInsets.only(left: 10, top: 10),
+                        padding: const EdgeInsets.only(left: 15, top: 10),
                         child: Radio(
                           value: SingingCharacter.t1,
                           groupValue: _character,
@@ -330,7 +334,14 @@ class _Profile2State extends State<Profile2> {
                         padding: EdgeInsets.only(top: 10),
                         child:
                             Text("T3", style: TextStyle(color: Colors.white))),
-                  ]),
+                  ])
+                : const Align(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 30, top: 10),
+                      child: Text('Selecione o curso, série e período antes',
+                          style: TextStyle(color: Color(0xffFF0000))),
+                    )),
             const Padding(
                 padding: EdgeInsets.only(left: 25, top: 20, bottom: 5),
                 child: Align(
@@ -468,9 +479,9 @@ class _Profile2State extends State<Profile2> {
                       "Selecione uma foto de perfil",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Lato-Regular',
-                      ),
+                          fontSize: 16,
+                          fontFamily: 'Lato-Regular',
+                          color: Colors.white),
                     ),
                   ),
                 )),
@@ -506,9 +517,9 @@ class _Profile2State extends State<Profile2> {
                       "Salvar",
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 16,
-                        fontFamily: 'Lato-Regular',
-                      ),
+                          fontSize: 16,
+                          fontFamily: 'Lato-Regular',
+                          color: Colors.white),
                     ),
                   ),
                 )),

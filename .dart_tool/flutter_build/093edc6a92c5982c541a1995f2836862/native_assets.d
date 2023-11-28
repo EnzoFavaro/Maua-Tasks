@@ -1,0 +1,1 @@
+ C:\\Users\\Users\\OneDrive\ -\ Instituto\ Maua\ de\ Tecnologia\\Documentos\\mauatasks_clone\\.dart_tool\\flutter_build\\093edc6a92c5982c541a1995f2836862\\native_assets.yaml: 
