@@ -20,7 +20,9 @@ final dropOpcoesSerie = [
   "5º semestre",
   "6º semestre",
   "7º semestre",
-  "8º semestre"
+  "8º semestre",
+  "9º semestre",
+  "10º semestre"
 ];
 
 final dropOpcoesPeriodo = [

@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.only(right: 10, top: 10),
-            child: Image.asset('assets/images/photoRogerio.png'),
+            child: Image.asset('assets/images/photoReference.png'),
           ),
         ],
       ),
