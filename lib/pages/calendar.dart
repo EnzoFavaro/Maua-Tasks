@@ -154,21 +154,30 @@ class _CalendarState extends State<Calendar> {
                             style: const TextStyle(color: Colors.white)));
                   },
                   markerBuilder: (context, day, events) {
-                    // Bolinha verde ou vermelha para mostrar se a tarefa expirou ou não, mesmo código para trocar a cor da bolinha, só mudar a cor.
+                    if(day.month != focusedDay.month){
+                      return const SizedBox();
+                    }
+                    Color corBolinha = getCorParaDia(day.day);
                     return Stack(
                       alignment: Alignment.topRight,
                       children: [
-                        Positioned(
-                            top: 5,
-                            child: Container(
-                              width: 10,
-                              height: 10,
-                              decoration: const BoxDecoration(
-                                  color: Color(0xff0FB600),
-                                  shape: BoxShape.rectangle,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(15))),
-                            ))
+                        if (corBolinha != Colors.grey)
+                          Positioned(
+                              top: 5,
+                              child: Container(
+                                  width: 10,
+                                  height: 10,
+                                  decoration: const BoxDecoration(
+                                      shape: BoxShape.rectangle,
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(15))),
+                                  child: ClipOval(
+                                    child: Container(
+                                      width: 10,
+                                      height: 10,
+                                      color: corBolinha,
+                                    ),
+                                  )))
                       ],
                     );
                   },
@@ -177,5 +186,18 @@ class _CalendarState extends State<Calendar> {
         ],
       ),
     );
+  }
+
+  Color getCorParaDia(int dia) {
+      switch (dia) {
+        case 3:
+          return const Color(0xffCC0A0A);
+        case 10 || 15:
+          return const Color(0xff0FB600); 
+        case 26:
+          return Colors.white;
+        default:
+          return Colors.grey;
+      }
   }
 }
